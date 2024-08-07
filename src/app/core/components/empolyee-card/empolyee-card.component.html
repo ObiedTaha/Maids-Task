@@ -1,0 +1,7 @@
+<div class="user py-5 px-3 text-center" [routerLink]="['/details',employee.id]" role="button">
+   
+    <img [src]="employee.avatar" class="w-50 my-3" [alt]="employee.first_name">
+    <h3 class="h6 fw-bolder"> {{employee.id}} </h3>
+    <h2 class="h5"><span class="fw-bold">{{employee.first_name}} {{employee.last_name}}    </span> </h2>
+    
+</div>
