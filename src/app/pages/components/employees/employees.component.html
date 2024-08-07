@@ -1,7 +1,19 @@
 <div class="container">
     <div class="row">
-        <div class="col-md-3 col-xl-3 col-xxl-3 my-3 " *ngFor="let employee of allEmployee">
-           <app-empolyee-card [employee]="employee"></app-empolyee-card>
+        <div class="col-md-3 col-xl-3 col-xxl-3 my-3 " *ngFor="let employee of allEmployee | paginate: { id: 'employeePaginate',
+        itemsPerPage: pageSize,
+        currentPage: currentPage,
+        totalItems: totalItems }">
+            <app-empolyee-card [employee]="employee"></app-empolyee-card>
         </div>
     </div>
+
+</div>
+
+<div class="d-flex justify-content-center my-4">
+    <pagination-controls id="employeePaginate" (pageChange)="pageChanged($event)"
+        (pageBoundsCorrection)="pageChanged($event)" [maxSize]="9" [directionLinks]="true" [autoHide]="true"
+        [responsive]="true" previousLabel="Previous" nextLabel="Next" screenReaderPaginationLabel="Pagination"
+        screenReaderPageLabel="page" screenReaderCurrentLabel="You're on page">
+    </pagination-controls>
 </div>

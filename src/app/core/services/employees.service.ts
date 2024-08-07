@@ -6,14 +6,15 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class EmployeesService {
+  baseUrl:string='https://reqres.in/api'
 
   constructor(private http:HttpClient) { }
 
 
-  getAllEmployee():Observable<any>{
-    return this.http.get(`https://reqres.in/api/users`);
+  getAllEmployee(pageNum:number=1):Observable<any>{
+    return this.http.get(`${this.baseUrl}/users?page=${pageNum}`);
   }
   getEmployeeById(id:number):Observable<any>{
-    return this.http.get(`https://reqres.in/api/users/${id}`);
+    return this.http.get(`${this.baseUrl}/users/${id}`);
   }
 }
