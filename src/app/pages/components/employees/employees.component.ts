@@ -1,22 +1,26 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { EmpolyeeCardComponent } from 'src/app/core/components/empolyee-card/empolyee-card.component';
-import { Iuser } from 'src/app/core/interfaces/iuser';
+import { IUser } from 'src/app/core/interfaces/iuser';
 import { EmployeesService } from 'src/app/core/services/employees.service';
 
 @Component({
   selector: 'app-employees',
   standalone: true,
-  imports: [CommonModule, EmpolyeeCardComponent, NgxPaginationModule],
+  imports: [CommonModule, EmpolyeeCardComponent, NgxPaginationModule,FormsModule],
   templateUrl: './employees.component.html',
   styleUrls: ['./employees.component.scss']
 })
 export class EmployeesComponent implements OnInit {
-  allEmployee: Iuser[] = [];
+  allEmployee: IUser[] = [];
   pageSize: number = 0;
   currentPage:number=1;
   totalItems:number=0;
+
+  searchTerm:number=0;
+
   constructor(private _employeesService: EmployeesService) { }
 
   ngOnInit(): void {

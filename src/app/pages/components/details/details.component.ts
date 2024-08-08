@@ -3,18 +3,19 @@ import { CommonModule } from '@angular/common';
 import { MatButtonModule } from '@angular/material/button';
 import { ActivatedRoute, RouterLink } from '@angular/router';
 import { EmployeesService } from 'src/app/core/services/employees.service';
-import { Iuser } from 'src/app/core/interfaces/iuser';
+import { IUser } from 'src/app/core/interfaces/iuser';
+import { SearchPipe } from 'src/app/core/pipes/search.pipe';
 
 @Component({
   selector: 'app-details',
   standalone: true,
-  imports: [CommonModule, MatButtonModule, RouterLink],
+  imports: [CommonModule, MatButtonModule, RouterLink,SearchPipe],
   templateUrl: './details.component.html',
   styleUrls: ['./details.component.scss']
 })
 export class DetailsComponent implements OnInit {
   employeeId: number = 0;
-  specificEmployee: Iuser = {} as Iuser;
+  specificEmployee: IUser = {} as IUser;
 
   constructor(private _activatedRoute: ActivatedRoute, private _employeesService: EmployeesService) { }
 

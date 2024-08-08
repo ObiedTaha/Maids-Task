@@ -1,15 +1,25 @@
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
+<nav class="navbar navbar-expand-lg bg-body-tertiary ">
     <div class="container-fluid">
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        <button class="navbar-toggler text-black"  type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+            <svg width="36" height="14" viewBox="0 0 36 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M2 2H34" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M17.1643 12H33.9998" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
                 <li class="nav-item">
                     <a class="nav-link" routerLink="details" routerLinkActive="activeLink">User List</a>
                 </li>
-            </ul>
+            </ul>   
+                <form class="example-form">
+                    <mat-form-field class="example-full-width">
+                      <mat-label>Search with ID</mat-label>
+                      <input matInput  type="search">
+                    </mat-form-field>
+                  </form>
+             
         </div>
     </div>
-</nav> 
+</nav>
