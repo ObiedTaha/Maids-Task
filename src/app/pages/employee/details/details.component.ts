@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { MatButtonModule } from '@angular/material/button';
 import { ActivatedRoute, RouterLink } from '@angular/router';
 import { EmployeesService } from 'src/app/core/services/employees.service';
-import { IUser } from 'src/app/core/interfaces/iuser';
+import { IUser } from 'src/app/core/interfaces/user';
 import { SearchPipe } from 'src/app/core/pipes/search.pipe';
 
 @Component({

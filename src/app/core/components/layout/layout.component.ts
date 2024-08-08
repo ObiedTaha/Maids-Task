@@ -1,14 +1,12 @@
-import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterLink, RouterLinkActive } from '@angular/router';
-import {MatInputModule} from '@angular/material/input';
-import {MatFormFieldModule} from '@angular/material/form-field';
-import {FormsModule} from '@angular/forms';
+import { Component } from '@angular/core';
+import { NavbarComponent } from '../navbar/navbar.component';
+import { RouterModule, RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-layout',
   standalone: true,
-  imports: [CommonModule,RouterLink,RouterLinkActive,FormsModule, MatFormFieldModule, MatInputModule],
+  imports: [CommonModule,NavbarComponent,RouterModule],
   templateUrl: './layout.component.html',
   styleUrls: ['./layout.component.scss']
 })

@@ -2,8 +2,8 @@ import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { NgxPaginationModule } from 'ngx-pagination';
-import { EmpolyeeCardComponent } from 'src/app/core/components/empolyee-card/empolyee-card.component';
-import { IUser } from 'src/app/core/interfaces/iuser';
+import { EmpolyeeCardComponent } from 'src/app/pages/employee/empolyee-card/empolyee-card.component';
+import { IUser } from 'src/app/core/interfaces/user';
 import { EmployeesService } from 'src/app/core/services/employees.service';
 
 @Component({

@@ -1,8 +1,8 @@
 import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { IUser } from '../../interfaces/iuser';
+import { IUser } from '../../../core/interfaces/user';
 import { RouterLink } from '@angular/router';
-import { SearchPipe } from '../../pipes/search.pipe';
+import { SearchPipe } from '../../../core/pipes/search.pipe';
 
 @Component({
   selector: 'app-empolyee-card',
