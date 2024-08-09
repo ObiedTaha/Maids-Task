@@ -8,6 +8,9 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { reducers } from './reducers';
+import { EffectsModule } from '@ngrx/effects';
+import { employeeReducer } from './pages/employee/model/reducer';
+import { EmployeeEffects } from './pages/employee/model/effects';
 
 @NgModule({
   declarations: [
@@ -19,11 +22,12 @@ import { reducers } from './reducers';
     AppRoutingModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    StoreModule.forRoot(reducers, {}),
-    StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: !isDevMode() }),
-    
+    StoreModule.forRoot({ employee: employeeReducer }),
+    EffectsModule.forRoot([EmployeeEffects]),
+    StoreDevtoolsModule.instrument()
+
   ],
   providers: [],
   bootstrap: [AppComponent]
-}) 
+})
 export class AppModule { }

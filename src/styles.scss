@@ -47,15 +47,12 @@ $maidsTask-theme: mat.define-light-theme((color: (primary: $maidsTask-primary,
 
 body {
   font-family: var(--font-family) !important;
-  background-color: #e1e9e5;
 }
 
 .activeLink {
   background-color: var(--main-color) !important;
   color: var(--light-color) !important;
   border-radius: 5px;
-
- 
 }
 
 

@@ -1,5 +1,5 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { IUser } from '../interfaces/user';
+import { IEmpolyee } from '../../pages/employee/model/empolyee';
 
 @Pipe({
   name: 'search',
@@ -7,7 +7,7 @@ import { IUser } from '../interfaces/user';
 })
 export class SearchPipe implements PipeTransform {
 
-  transform(customer: IUser[], searchKey: string): IUser[] {
+  transform(customer: IEmpolyee[], searchKey: string): IEmpolyee[] {
     if (!customer) return [];
   
 

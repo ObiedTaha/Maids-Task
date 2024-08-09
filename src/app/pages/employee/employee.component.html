@@ -1,0 +1,19 @@
+<div class="container">
+    <div class="row" *ngIf="Employees$ |async as data">
+        <div class="col-md-3 col-xl-3 col-xxl-3 my-3 " *ngFor="let employee of data.employee| paginate: { id: 'employeePaginate',
+        itemsPerPage: data.per_page,
+        currentPage: data.page,
+        totalItems: data.total}">
+            <app-empolyee-card [searchTerm]="searchTerm" [employee]="employee"></app-empolyee-card>
+        </div>
+    </div>
+
+</div>
+
+<div class="d-flex justify-content-center my-4">
+    <pagination-controls id="employeePaginate" (pageChange)="pageChanged($event)"
+        (pageBoundsCorrection)="pageChanged($event)" [maxSize]="9" [directionLinks]="true" [autoHide]="true"
+        [responsive]="true" previousLabel="Previous" nextLabel="Next" screenReaderPaginationLabel="Pagination"
+        screenReaderPageLabel="page" screenReaderCurrentLabel="You're on page">
+    </pagination-controls>
+</div>
