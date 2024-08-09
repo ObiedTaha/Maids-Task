@@ -1,6 +1,11 @@
 # MaidsTask
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.13.
+# About search bar 
+i do not do it because the endpoint did not return data with the search key 
+i can do it but do not do it at nav bar 
+and i make pipe to search with number 
+i can do it with other ways if you want .
 
 ## Development server
 

@@ -1,6 +1,6 @@
 <div class="container">
     <div class="row" *ngIf="Employees$ |async as data">
-        <div class="col-md-3 col-xl-3 col-xxl-3 my-3 " *ngFor="let employee of data.employee| paginate: { id: 'employeePaginate',
+        <div class="col-sm-6 col-md-4 col-xl-3 col-xxl-3 my-3 " *ngFor="let employee of data.employee| paginate: { id: 'employeePaginate',
         itemsPerPage: data.per_page,
         currentPage: data.page,
         totalItems: data.total}">

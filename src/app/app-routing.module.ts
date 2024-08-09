@@ -8,11 +8,11 @@ const routes: Routes = [
       { path: '', redirectTo: 'employee', pathMatch: 'full' },
       {
         path: 'employee', loadChildren: () => import('./pages/employee/employee.module').then(m => m.EmployeeModule)
-      }
+      },
+      { path: '**', loadComponent: () => import('./pages/notfound/notfound.component').then(c => c.NotfoundComponent), title: 'Not Found' }
     ]
   },
 
-  { path: '**', loadComponent: () => import('./pages/notfound/notfound.component').then(c => c.NotfoundComponent), title: 'Not Found' }
 ];
 
 @NgModule({

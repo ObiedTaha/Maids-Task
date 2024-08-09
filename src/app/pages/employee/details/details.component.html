@@ -1,15 +1,13 @@
-<div class="d-flex h-75 justify-content-center align-items-center">
-    <div class="details-content py-5 card w-75 ">
-        <div class="container ">
+
+        <div class="container my-5">
             <div class="row align-items-center">
                 <div class="col-md-5 ">
                     <div class=" d-flex justify-content-center ">
                         <img [src]="specificEmployee.avatar" class="w-50 rounded-3" [alt]="specificEmployee.first_name">
                     </div>
-
                 </div>
-                <div class="col-md-7">
-                    <div>
+                <div class="col-md-5">
+                    <div class="employeeData">
                         <ul class="list-unstyled">
                             <li>
                                 <h3 class="text h6">First Name : <span class="h4"> {{specificEmployee.first_name}}
@@ -26,10 +24,9 @@
                             </li>
                         </ul>
                     </div>
-                    <button class="w-25 m-auto " mat-raised-button color="primary" routerLink="/employee">Back to Home</button>
+                    <button class="w-25 m-auto " mat-raised-button color="primary" routerLink="/employee">Back </button>
                 </div>
             </div>
 
         </div>
-    </div>
-</div>
+  

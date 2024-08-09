@@ -29,7 +29,7 @@ export class DetailsComponent implements OnInit {
     this._activatedRoute.paramMap.subscribe({
       next: (res: any) => {
         this.employeeId = res.params.id
-        console.log(this.employeeId);
+        // console.log(this.employeeId);
       }
     })
   }
@@ -39,7 +39,7 @@ export class DetailsComponent implements OnInit {
     this._employeesService.getEmployeeById(this.employeeId).subscribe({
       next: (res) => {
         this.specificEmployee = res.data;
-        console.log(this.specificEmployee);
+        // console.log(this.specificEmployee);
 
 
       }

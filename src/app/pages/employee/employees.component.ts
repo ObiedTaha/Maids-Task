@@ -39,7 +39,6 @@ export class EmployeesComponent implements OnInit {
   }
 
   pageChanged(event:any):void{
-    console.log(event);
     this._employeesService.getAllEmployee(event).subscribe({
       next: (res) => {
         this.allEmployee = res.data;
